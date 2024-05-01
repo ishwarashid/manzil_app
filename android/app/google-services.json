@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "581714265165",
+    "firebase_url": "https://manzil-99239-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "manzil-99239",
+    "storage_bucket": "manzil-99239.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:581714265165:android:1c931c816dadaf75e9c804",
+        "android_client_info": {
+          "package_name": "com.example.flutter.manzil"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmLNaFWUsZbJRW7cYth2MKKa1Z5FKLCnU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
