@@ -17,10 +17,24 @@ class UserDatabase{
     db.collection("users").add(user).whenComplete(() => Get.snackbar("Success", "Details saved.", colorText: Colors.green, backgroundColor: Colors.white));
   }
 
-  userExists(String phoneNumber) async {
-    await db.collection("users").where("phoneNumber", isEqualTo: phoneNumber).get().then((value) {
-        return value.docs.isNotEmpty;
-    });
+   Future<bool> userExists(String phoneNumber) async {
+    var querySnapshot = await db.collection("users").where("phoneNumber", isEqualTo: phoneNumber).get();
+    if(querySnapshot.docs.isEmpty){
+      return false;
+    }
+    else{
+      return true;
+    }
+  }
+
+  Future<Map<String, dynamic>?> getUser(String phoneNumber) async {
+    var querySnapshot = await db.collection("users").where("phoneNumber", isEqualTo: phoneNumber).get();
+    if(querySnapshot.docs.isEmpty){
+      return null;
+    }
+    else{
+      return querySnapshot.docs.first.data();
+    }
   }
 
 }
